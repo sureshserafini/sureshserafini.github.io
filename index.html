@@ -3,36 +3,173 @@
 <head>
 	<title>Suresh Serafini</title>
 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
 	<style type="text/css">
 		body {
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			margin: 0px;
+			background: #000;
+		}
+
+		.single-page {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			color: #fff;
+			text-align: center;
+		}
+
+		#first-page {
 			background-image: url('background.jpg');
 			background-color: #000;
 			background-size: cover;
-			margin: 0px;
 		}
 
 		#first-page .bar {
-			margin-top: 75vh;
+			text-align: left;
+			position: relative;
+			top: 75vh;
 			background: #1d1d1b;
 		}
 
 		#first-page .bar h1 {
-			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			margin: 0px;
 			font-weight: 300;
 			padding: 12px 20%;
 			color: #fff;
 		}
 
-		#first-page .bar h1 span {
+		#first-page .bar h1 span {			
 			color: #919191;
+		}
+
+		#second-page {
+		}
+
+		.page-title {
+			margin-top: 6vh;
+			margin-bottom: 12vh;
+			display: inline-flex;
+			height: 6vh;
+			text-align: center;
+			width: 100%;
+			font-size: 28px;
+			letter-spacing: 3px;
+			font-weight: 100;
+			border-bottom: 1px solid #fff;
+		}
+
+		.title-text {
+			height: 12vh;
+			line-height: 12vh;
+			background: #000;
+			margin: auto;
+			background: #000;
+			padding: 0px 14px;
+		}
+
+		.page-slider {
+			position: absolute;
+			width: 100%;
+			font-size: 42px;
+			height: 8vh;			
+		}
+
+		.next-page {
+			bottom: 0px;
+		}
+
+		.previous-page {
+			top: 0px;
+		}
+
+		.page-element {
+			font-weight: 100;
+			letter-spacing: 3px;
+		}
+
+		.page-element div {
+			margin-bottom: 3px;
+		}
+
+		.page-element .title {
+			color: #919191;
+		}
+
+		#second-page .page-title {
+			margin-bottom: 8vh;
+		}
+
+		#second-page .page-element {
+			height: 20vh;
+		}
+
+		#third-page .page-element {
+			height: 14vh;
+		}
+
+		#third-page .page-element.first-child {
+			margin-top: 17vh;
 		}
 	</style>
 </head>
 <body>
-	<div id="first-page">
+	<div id="first-page" class="single-page">
 		<div class="bar">
 			<h1>Hello, I am <span>Suresh Serafini</span></h1>
 		</div>
+		<div class="page-slider next-page"><i class="fa fa-angle-double-down"></i></div>
 	</div>
+	<div id="second-page" class="single-page">
+		<div class="page-slider previous-page"><i class="fa fa-angle-double-up"></i></div>
+		<div class="page-title">
+			<div class="title-text">
+				RESUME
+			</div>
+		</div>
+		<div class="page-element">
+			<div class="title">2016</div>
+			<div class="content">Freelance</div>
+			<div class="content">Graphic</div>
+			<div class="content">Designer</div>
+		</div>
+		<div class="page-element">
+			<div class="title">2015</div>
+			<div class="content">Work</div>
+			<div class="content">Experience</div>
+		</div>
+		<div class="page-element">
+			<div class="title">2014</div>
+			<div class="content">Work</div>
+			<div class="content">Experience</div>
+		</div>				
+		<div class="page-element">
+			<div class="title">2013-2016</div>
+			<div class="content">Graphic</div>
+			<div class="content">Education</div>
+		</div>		
+		<div class="page-slider next-page"><i class="fa fa-angle-double-down"></i></div>
+	</div>
+	<div id="third-page" class="single-page">
+		<div class="page-slider previous-page"><i class="fa fa-angle-double-up"></i></div>
+		<div class="page-title">
+			<div class="title-text">
+				CONTACT
+			</div>
+		</div>
+		<div class="page-element first-child">
+			<div class="title">ADDRESS:</div>
+			<div class="content">Via Ungaretti 1° 195 (FM) - Italy</div>
+		</div>
+		<div class="page-element">
+			<div class="title">PHONE NUMBER:</div>
+			<div class="content">+39 333 223 1875</div>
+		</div>
+		<div class="page-element">
+			<div class="title">E-MAIL:</div>
+			<div class="content">sureshserafini@gmail.com</div>
+		</div>								
+	</div>		
 </body>
 </html>
