@@ -4,6 +4,7 @@
 	<title>Suresh Serafini</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<style type="text/css">
 		body {
@@ -70,6 +71,7 @@
 		}
 
 		.page-slider {
+			cursor: pointer;
 			position: absolute;
 			width: 100%;
 			font-size: 42px;
@@ -113,16 +115,38 @@
 			margin-top: 17vh;
 		}
 	</style>
+
+	<script type="text/javascript">
+		jQuery(function() {
+			$(".go-to-first").on("click", function() {
+				$(document.body).animate({
+					'scrollTop': $('#first-page').offset().top
+				}, 500);
+			});
+
+			$(".go-to-second").on("click", function() {
+				$(document.body).animate({
+					'scrollTop': $('#second-page').offset().top
+				}, 500);
+			});
+
+			$(".go-to-third").on("click", function() {
+				$(document.body).animate({
+					'scrollTop': $('#third-page').offset().top
+				}, 500);
+			});						
+		});
+	</script>
 </head>
 <body>
 	<div id="first-page" class="single-page">
 		<div class="bar">
 			<h1>Hello, I am <span>Suresh Serafini</span></h1>
 		</div>
-		<div class="page-slider next-page"><i class="fa fa-angle-double-down"></i></div>
+		<div class="go-to-second page-slider next-page"><i class="fa fa-angle-double-down"></i></div>
 	</div>
 	<div id="second-page" class="single-page">
-		<div class="page-slider previous-page"><i class="fa fa-angle-double-up"></i></div>
+		<div class="go-to-first page-slider previous-page"><i class="fa fa-angle-double-up"></i></div>
 		<div class="page-title">
 			<div class="title-text">
 				RESUME
@@ -149,10 +173,10 @@
 			<div class="content">Graphic</div>
 			<div class="content">Education</div>
 		</div>		
-		<div class="page-slider next-page"><i class="fa fa-angle-double-down"></i></div>
+		<div class="go-to-third page-slider next-page"><i class="fa fa-angle-double-down"></i></div>
 	</div>
 	<div id="third-page" class="single-page">
-		<div class="page-slider previous-page"><i class="fa fa-angle-double-up"></i></div>
+		<div class="go-to-second page-slider previous-page"><i class="fa fa-angle-double-up"></i></div>
 		<div class="page-title">
 			<div class="title-text">
 				CONTACT
